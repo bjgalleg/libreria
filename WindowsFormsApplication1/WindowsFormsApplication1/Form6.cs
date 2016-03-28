@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        private bool existeLib(String nombrelibro)
+        private bool existeLib(String nombrelib)
         {
             //label1.Text = conexion.State.ToString();
             try
@@ -51,12 +51,12 @@ namespace WindowsFormsApplication1
                 conexionCont = new MySqlConnection(connectionString);
                 //conexion = new MySqlConnection("Server = localhost; Uid = root; Password = FIEC05553_l3m ; Database = sistemafacturacion; Port = 3306;"); conexionCmd = new MySqlCommand();
                 conexionCont.Open();
-
+                conexionCmdCont = new MySqlCommand();
                 conexionCmdCont.Connection = conexionCont;
                 conexionCmdCont.CommandText = "verificarLib";
                 conexionCmdCont.CommandType = CommandType.StoredProcedure;
                 //rucCliente a rucing
-                conexionCmdCont.Parameters.AddWithValue("@lib", nombrelibro);
+                conexionCmdCont.Parameters.AddWithValue("@lib", nombrelib);
                 conexionCmdCont.Parameters["@lib"].Direction = ParameterDirection.Input;
                 //existeruc 
                 conexionCmdCont.Parameters.AddWithValue("@existeLib", MySqlDbType.Int32);
