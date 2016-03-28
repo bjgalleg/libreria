@@ -98,6 +98,7 @@ namespace WindowsFormsApplication1
             {
                 this.nomlib.Text = "";
                 this.existencias.Text = "";
+                this.autlib.Text = "";
                 this.edit.Text = "";
                 this.libprec.Text = "";
                 this.libdes.Text = "";
@@ -107,35 +108,41 @@ namespace WindowsFormsApplication1
                 //MessageBox.Show("El RUC ingresado esta registrado ya en el sistema.", "Contribuyente existente", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
-            {/*
+            {
                 conexionCont = new MySqlConnection(connectionString);
                 //conexion = new MySqlConnection("Server = localhost; Uid = root; Password = FIEC05553_l3m ; Database = sistemafacturacion; Port = 3306;"); conexionCmd = new MySqlCommand();
                 conexionCont.Open();
+                
                 conexionCmdCont.Connection = conexionCont;
                 conexionCmdCont.CommandText = "añadirNuevoLibro";
                 conexionCmdCont.CommandType = CommandType.StoredProcedure;
 
-                conexionCmdCont.Parameters.AddWithValue("@ruc", this.txtruc.Text);
-                conexionCmdCont.Parameters["@ruc"].Direction = ParameterDirection.Input;
-                conexionCmdCont.Parameters.AddWithValue("@nombre", this.nombreC.Text);
-                conexionCmdCont.Parameters["@nombre"].Direction = ParameterDirection.Input;
-                conexionCmdCont.Parameters.AddWithValue("@direccion", this.txtdireccion.Text);
-                conexionCmdCont.Parameters["@direccion"].Direction = ParameterDirection.Input;
-                if (this.telefonoC.Text != "")
-                {
-                    conexionCmdCont.Parameters.AddWithValue("@telefono", this.telefonoC.Text);
-                    conexionCmdCont.Parameters["@telefono"].Direction = ParameterDirection.Input;
-                }
-                else
-                {
-                    conexionCmdCont.Parameters.AddWithValue("@telefono", "");
-                    conexionCmdCont.Parameters["@telefono"].Direction = ParameterDirection.Input;
-                }
+                conexionCmdCont.Parameters.AddWithValue("@libro", this.nomlib.Text);
+                conexionCmdCont.Parameters["@libro"].Direction = ParameterDirection.Input;
+                conexionCmdCont.Parameters.AddWithValue("@aut", this.autlib.Text);
+                conexionCmdCont.Parameters["@aut"].Direction = ParameterDirection.Input;
+                conexionCmdCont.Parameters.AddWithValue("@edito", this.edit.Text);
+                conexionCmdCont.Parameters["@edito"].Direction = ParameterDirection.Input;
+                conexionCmdCont.Parameters.AddWithValue("@prec", this.libprec.Text);
+                conexionCmdCont.Parameters["@prec"].Direction = ParameterDirection.Input;
+                conexionCmdCont.Parameters.AddWithValue("@gene", this.libgen.Text);
+                conexionCmdCont.Parameters["@gene"].Direction = ParameterDirection.Input;
+                conexionCmdCont.Parameters.AddWithValue("@libdescr", this.libdes.Text);
+                conexionCmdCont.Parameters["@libdescr"].Direction = ParameterDirection.Input;
+                conexionCmdCont.Parameters.AddWithValue("@exist", this.existencias.Text);
+                conexionCmdCont.Parameters["@exist"].Direction = ParameterDirection.Input;
+
                 conexionCmdCont.ExecuteNonQuery();
                 conexionCont.Close();
+                this.nomlib.Text = "";
+                this.autlib.Text = "";
+                this.existencias.Text = "";
+                this.edit.Text = "";
+                this.libprec.Text = "";
+                this.libdes.Text = "";
+                this.libgen.Text = "";
 
-                //this.Hide();
-                */
+              
             }
         }
 
@@ -155,6 +162,11 @@ namespace WindowsFormsApplication1
         }
 
         private void textBox2_TextChanged(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void salir_Click(object sender, EventArgs e)
         {
 
         }

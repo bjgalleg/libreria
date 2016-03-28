@@ -179,6 +179,7 @@
             this.salir.TabIndex = 15;
             this.salir.Text = "Salir";
             this.salir.UseVisualStyleBackColor = true;
+            this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
             // añadirlibro
             // 
