@@ -36,7 +36,7 @@
             this.nomlib = new System.Windows.Forms.TextBox();
             this.autlib = new System.Windows.Forms.TextBox();
             this.edit = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.libprec = new System.Windows.Forms.TextBox();
             this.existencias = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -114,12 +114,12 @@
             this.edit.Size = new System.Drawing.Size(100, 20);
             this.edit.TabIndex = 7;
             // 
-            // textBox4
+            // libprec
             // 
-            this.textBox4.Location = new System.Drawing.Point(157, 125);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 8;
+            this.libprec.Location = new System.Drawing.Point(157, 125);
+            this.libprec.Name = "libprec";
+            this.libprec.Size = new System.Drawing.Size(100, 20);
+            this.libprec.TabIndex = 8;
             // 
             // existencias
             // 
@@ -192,7 +192,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.existencias);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.libprec);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.autlib);
             this.Controls.Add(this.nomlib);
@@ -219,7 +219,7 @@
         private System.Windows.Forms.TextBox nomlib;
         private System.Windows.Forms.TextBox autlib;
         private System.Windows.Forms.TextBox edit;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox libprec;
         private System.Windows.Forms.TextBox existencias;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

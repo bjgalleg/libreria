@@ -17,3 +17,22 @@ C:\Users\HP\Documents\Visual Studio 2012\Projects\WindowsFormsApplication1\Windo
 C:\Users\HP\Documents\Visual Studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.usuarios.resources
 C:\Users\HP\Documents\Visual Studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.eliminarusuario.resources
 C:\Users\HP\Documents\Visual Studio 2012\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form9.resources
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.ResolveComReference.cache
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ingresarusuario.resources
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Inicio.resources
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Inventario.resources
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.compra.resources
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.consulta.resources
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.añadirlibro.resources
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.usuarios.resources
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.eliminarusuario.resources
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form9.resources
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\USUARIO\Documents\libreria\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

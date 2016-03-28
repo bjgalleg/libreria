@@ -24,8 +24,10 @@ namespace WindowsFormsApplication1
 {
     public partial class añadirlibro : Form
     {
-        MySqlConnection conexion;
-        MySqlCommand conexionCmdFACT;
+        private static OdbcConnection conexionBaseDeDatos = new OdbcConnection();
+        MySqlConnection conexionCont;
+        MySqlCommand conexionCmdCont;
+        private String connectionString = "Server = 127.0.0.1; Uid = root; Password =; Database = libreria; Port = 3306;";
 
         String nombrelibro = "";
         int cantidad = 0;
@@ -40,28 +42,77 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+
+        private bool existeLib(String nombrelibro)
+        {
+            //label1.Text = conexion.State.ToString();
+            try
+            {
+                conexionCont = new MySqlConnection(connectionString);
+                //conexion = new MySqlConnection("Server = localhost; Uid = root; Password = FIEC05553_l3m ; Database = sistemafacturacion; Port = 3306;"); conexionCmd = new MySqlCommand();
+                conexionCont.Open();
+
+                conexionCmdCont.Connection = conexionCont;
+                conexionCmdCont.CommandText = "verificarLib";
+                conexionCmdCont.CommandType = CommandType.StoredProcedure;
+                //rucCliente a rucing
+                conexionCmdCont.Parameters.AddWithValue("@lib", nombrelibro);
+                conexionCmdCont.Parameters["@lib"].Direction = ParameterDirection.Input;
+                //existeruc 
+                conexionCmdCont.Parameters.AddWithValue("@existeLib", MySqlDbType.Int32);
+                conexionCmdCont.Parameters["@existeLib"].Direction = ParameterDirection.Output;
+
+                conexionCmdCont.ExecuteNonQuery();
+
+
+                if ((Int32)conexionCmdCont.Parameters["@existeLib"].Value == 1)
+                {
+                    conexionCont.Close();
+
+                    MessageBox.Show("El libro ingresado ya existe en el sistema.", "Libro ya existente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+
+            finally
+            {
+                conexionCont.Close();
+            }
+            return false;
+        }
+
+
+
         private void button1_Click(object sender, EventArgs e)
         {
 
             bool existelibro = this.existeLib(this.nombrelibro);
 
-            if (existeLib)
+            if (existelibro)
             {
-                this.name.Text = "";
+                this.nomlib.Text = "";
                 this.existencias.Text = "";
-                this.txtdireccion.Text = "";
-                this.telefonoC.Text = "";
+                this.edit.Text = "";
+                this.libprec.Text = "";
+                this.libdes.Text = "";
+                this.libgen.Text = "";
                 //this.codProvincia.Text = "";
                 //this.errores.Visible = false;
                 //MessageBox.Show("El RUC ingresado esta registrado ya en el sistema.", "Contribuyente existente", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
-            {
+            {/*
                 conexionCont = new MySqlConnection(connectionString);
                 //conexion = new MySqlConnection("Server = localhost; Uid = root; Password = FIEC05553_l3m ; Database = sistemafacturacion; Port = 3306;"); conexionCmd = new MySqlCommand();
                 conexionCont.Open();
                 conexionCmdCont.Connection = conexionCont;
-                conexionCmdCont.CommandText = "añadirNuevoCliente";
+                conexionCmdCont.CommandText = "añadirNuevoLibro";
                 conexionCmdCont.CommandType = CommandType.StoredProcedure;
 
                 conexionCmdCont.Parameters.AddWithValue("@ruc", this.txtruc.Text);
@@ -84,7 +135,7 @@ namespace WindowsFormsApplication1
                 conexionCont.Close();
 
                 //this.Hide();
-
+                */
             }
         }
 
@@ -100,7 +151,7 @@ namespace WindowsFormsApplication1
 
         private void textBox1_TextChanged(object sender, System.EventArgs e)
         {
-
+            nombrelibro = this.nomlib.Text.ToString();
         }
 
         private void textBox2_TextChanged(object sender, System.EventArgs e)
